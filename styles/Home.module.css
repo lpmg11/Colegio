@@ -76,7 +76,7 @@
 
 .addButton:hover{
   background-color: #f50057;
-  box-shadow: 0 0 10px rgba(245,0,87,0.5);
+  box-shadow: 0 0 10px rgba(255, 116, 165, 0.949);
 }
 
 /* adding click effect */
