@@ -36,6 +36,10 @@ export default function Home() {
         <title>prueba</title>
         <meta name="description" content="Administracion de colegio" />
         <link rel="icon" href="/favicon.ico" />
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet">
+        </link>
       </Head>
       <main>
         <NavBar Tittle="Profesores" />
@@ -46,8 +50,8 @@ export default function Home() {
                 <h3>{profesor.name}</h3>
                 <div className={Style.card_head.buttons}>
                   <Link href={`/profesores/${profesor.id}`}>
-                    <a className={Style.card_head_button}>
-                      Editar
+                    <a className={Style.card_head_button}>{" "}
+                      <span className="material-icons">edit</span>
                     </a>
                   </Link>
                   <a
@@ -55,7 +59,7 @@ export default function Home() {
                     className={Style.card_head_button}
                   >
                     {" "}
-                    Eliminar
+                    <span className="material-icons">delete</span>
                   </a>
                 </div>
               </div>
@@ -66,7 +70,7 @@ export default function Home() {
           <Link href="/profesores/new">
             <div className={Style.addButton}>
                 <a className={Style.addButton_button}>
-                  Agregar
+                  <span className="material-icons">add</span>
                 </a>
             </div>
           </Link>
