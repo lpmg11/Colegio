@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import EditOutlined from "@mui/icons-material/EditOutlined";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
-import { AddCircleOutline } from "@mui/icons-material";
+import AddCircleOutline from "@mui/icons-material/AddCircleOutline";
 
 export default function Home() {
   const [profesores, setProfesores] = useState([]);
