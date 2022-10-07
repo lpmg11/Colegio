@@ -4,9 +4,6 @@ import Style from "../../styles/Home.module.css";
 import axios from "axios";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import EditOutlined from "@mui/icons-material/EditOutlined";
-import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
-import AddCircleOutline from "@mui/icons-material/AddCircleOutline";
 
 export default function Home() {
   const [profesores, setProfesores] = useState([]);
@@ -50,7 +47,7 @@ export default function Home() {
                 <div className={Style.card_head.buttons}>
                   <Link href={`/profesores/${profesor.id}`}>
                     <a className={Style.card_head_button}>
-                      <EditOutlined />
+                      Editar
                     </a>
                   </Link>
                   <a
@@ -58,7 +55,7 @@ export default function Home() {
                     className={Style.card_head_button}
                   >
                     {" "}
-                    <DeleteOutlineIcon />
+                    Eliminar
                   </a>
                 </div>
               </div>
@@ -69,7 +66,7 @@ export default function Home() {
           <Link href="/profesores/new">
             <div className={Style.addButton}>
                 <a className={Style.addButton_button}>
-                  <AddCircleOutline />
+                  Agregar
                 </a>
             </div>
           </Link>
