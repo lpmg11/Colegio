@@ -4,8 +4,11 @@ export default async function handler(req, res) {
     if (req.method === 'GET') {
         return getTeachers(req, res);
     }
-    if (req.method === 'POST') {
+    else if (req.method === 'POST') {
         return postTeacher(req, res);
+    }
+    else {
+        return res.status(405).json({message: 'Method not allowed'})
     }
 }
 

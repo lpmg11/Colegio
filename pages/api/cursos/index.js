@@ -2,13 +2,13 @@ import pool from "../../../Config/db";
 
 export default async function handler(req, res) {
   if (req.method === "GET") {
-    getCourses(req, res);
+    return getCourses(req, res);
   }
-  if (req.method === "POST") {
-    postCourse(req, res);
+  else if (req.method === "POST") {
+    return postCourse(req, res);
   }
   else {
-    res.status(405).json({ message: "Method not allowed" });
+    return res.status(405).json({ message: "Method not allowed" });
   }
 }
 

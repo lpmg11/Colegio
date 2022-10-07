@@ -2,13 +2,13 @@ import pool from "../../../Config/db";
 
 export default async function handler(req, res) {
     if (req.method === "GET") {
-        getCourse(req, res);
+        return getCourse(req, res);
     }
-    if (req.method === "DELETE") {
-        deleteCourse(req, res);
+    else if (req.method === "DELETE") {
+        return deleteCourse(req, res);
     }
-    if (req.method === "PUT") {
-        putCourse(req, res);
+    else if (req.method === "PUT") {
+        return putCourse(req, res);
     }
     else {
         res.status(405).json({ message: "Method not allowed" });

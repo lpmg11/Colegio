@@ -2,10 +2,10 @@ import pool from "../../../../Config/db";
 
 export default async function handler(req, res) {
     if (req.method === "POST") {
-        postAsignacion(req, res);
+        return postAsignacion(req, res);
     }
-    if (req.method === "DELETE") {
-        deleteAsignacion(req, res);
+    else if (req.method === "DELETE") {
+        return deleteAsignacion(req, res);
     }
     else {
         res.status(405).json({message: 'Method not allowed'});

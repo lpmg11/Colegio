@@ -1,25 +1,25 @@
 .container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 0 0.5rem;
-  min-height: 100vh;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: flex-start;
+  padding-top: 6rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  min-height: calc(100vh - 6rem);
+  max-width: 100vw;
   background-color: #1a1a1a;
   color: #fff;
+  flex-wrap: wrap;
 }
 
-.cards {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 3rem;
-}
 
 .card {
-  margin: 1rem;
-  flex-basis: 45%;
+  display: flex;
+    flex-direction: column;
+    align-content: space-between;
+  margin : 1rem;
+  flex-basis: 140px;
   padding: 1.5rem;
   text-align: left;
   color: inherit;
@@ -33,4 +33,156 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.card_head_button {
+  color: #0070f3;
+  text-decoration: none;
+}
+.card_head_buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.card_head_button:hover,
+.card_head_button:focus,
+.card_head_button:active {
+  color: #2484f1;
+}
+
+.addButton{
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #4d4d4d;
+  color: #fff;
+  font-size: 2rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.addButton a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.addButton:hover{
+  background-color: #f50057;
+  box-shadow: 0 0 10px rgba(245,0,87,0.5);
+}
+
+/* adding click effect */
+.addButton:active{
+  transform: scale(0.9);
+}
+
+.centerContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background: #363636;
+  color: #fff;
+}
+
+.formContainer{
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 400px;
+  height: 70vh;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  background: #1a1a1a;
+}
+
+.formContainer h1{
+  margin: 0;
+  margin-top: 2rem;
+  padding: 0;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #fff;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin : 1rem;
+}
+.form_group{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 75%;
+  height: 100%;
+  padding: 1rem;
+}
+.form_group label{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  font-size: 1.2rem;
+  color: #fff;
+}
+.form_group input{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 20px;
+  font-size: 1.2rem;
+  color: #fff;
+  background: #1a1a1a;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  padding: 0.5rem;
+  outline: none;
+}
+
+.form_group input:focus{
+  border: 1px solid #f50057;
+}
+
+.form_group input::placeholder{
+  color: rgb(151, 151, 151);
+}
+.form_group button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 1.2rem;
+  color: #fff;
+  background: #1a1a1a;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  padding: 0.5rem;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }

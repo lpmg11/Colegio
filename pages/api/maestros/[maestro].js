@@ -2,16 +2,16 @@ import pool from "../../../Config/db"
 
 export default async function handler(req, res) {
     if (req.method === 'GET') {
-        getMaestro(req, res);
+        return getMaestro(req, res);
     }
-    if (req.method === 'DELETE') {
-        deleteMaestro(req, res);
+    else if (req.method === 'DELETE') {
+        return deleteMaestro(req, res);
     }
-    if (req.method === 'PUT') {
-        putMaestro(req, res);
+    else if (req.method === 'PUT') {
+        return putMaestro(req, res);
     }
     else {
-        res.status(405).json({message: 'Method not allowed'});
+        res.status(405).json({message: 'Method not allowed'})
     }
 }
 
