@@ -6,24 +6,23 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 
 export default function Home() {
-  const [profesores, setProfesores] = useState([]);
+  const [alumnos, setalumnos] = useState([]);
   useEffect(() => {
     axios
-      .get("/api/maestros")
+      .get("/api/estudiantes")
       .then((res) => {
-        setProfesores(res.data);
+        setalumnos(res.data);
       })
       .catch((err) => {
         console.log(err);
       });
   }, []);
 
-  const deleteProfesor = (id) => {
+  const deleteestudiante = (id) => {
     axios
-      .delete(`/api/maestros/${id}`)
+      .delete(`/api/estudiantes/${id}`)
       .then((res) => {
-        console.log(res);
-        setProfesores(profesores.filter((profesor) => profesor.id !== id));
+        setalumnos(alumnos.filter((estudiante) => estudiante.id !== id));
       })
       .catch((err) => {
         console.log(err);
@@ -33,7 +32,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>prueba</title>
+        <title>Alumnos</title>
         <meta name="description" content="Administracion de colegio" />
         <link rel="icon" href="/favicon.ico" />
         <link
@@ -42,20 +41,20 @@ export default function Home() {
         </link>
       </Head>
       <main>
-        <NavBar Tittle="Profesores" />
+        <NavBar Tittle="Alumnos" />
         <div className={Style.container}>
-          {profesores.map((profesor) => (
-            <div className={Style.card} key={profesor.id}>
+          {alumnos.map((estudiante) => (
+            <div className={Style.card} key={estudiante.id}>
               <div className={Style.card_head}>
-                <h3>{profesor.name}</h3>
+                <h3>{estudiante.name}</h3>
                 <div className={Style.card_head.buttons}>
-                  <Link href={`/profesores/${profesor.id}`}>
+                  <Link href={`/alumnos/${estudiante.id}`}>
                     <a className={Style.card_head_button}>{" "}
                       <span className="material-icons">edit</span>
                     </a>
                   </Link>
                   <a
-                    onClick={() => deleteProfesor(profesor.id)}
+                    onClick={() => deleteestudiante(estudiante.id)}
                     className={Style.card_head_button}
                   >
                     {" "}
@@ -63,11 +62,11 @@ export default function Home() {
                   </a>
                 </div>
               </div>
-              <p>{profesor.phone}</p>
-              <p>{profesor.email}</p>
+              <p>{estudiante.phone}</p>
+              <p>{estudiante.email}</p>
             </div>
           ))}
-          <Link href="/profesores/new">
+          <Link href="/alumnos/new">
             <div className={Style.addButton}>
                 <a className={Style.addButton_button}>
                   <span className="material-icons">add</span>

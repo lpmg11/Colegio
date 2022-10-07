@@ -58,7 +58,6 @@ export default function Home() {
                     onClick={() => deleteProfesor(profesor.id)}
                     className={Style.card_head_button}
                   >
-                    {" "}
                     <span className="material-icons">delete</span>
                   </a>
                 </div>

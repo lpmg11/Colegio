@@ -5,19 +5,19 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 
 export default function Home() {
-    const [profesor, setProfesor] = useState({});
+    const [estudiante, setEstudiante] = useState({});
 
-    const redirectToProfesores = () => {
-        window.location.href = "/profesores";
+    const redirectToEstudiantes = () => {
+        window.location.href = "/alumnos";
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const {name, phone, email} = profesor;
-        axios.post('/api/maestros', {name, phone, email})
+        const {name, phone, email} = estudiante;
+        axios.post('/api/estudiantes', {name, phone, email})
         .then((res) => {
             console.log(res);
-            redirectToProfesores();
+            redirectToEstudiantes();
         })
         .catch((err) => {
             console.log(err);
@@ -26,22 +26,22 @@ export default function Home() {
 
     const handleChange = (e) => {
         const {name, value} = e.target;
-        setProfesor({...profesor, [name]: value});
-        console.log(profesor);
+        setEstudiante({...estudiante, [name]: value});
+        console.log(estudiante);
     }
 
 
   return (
     <div>
       <Head>
-        <title>Nuevo Profesor</title>
-        <meta name="description" content="Administracion de colegio" />
+        <title>Nuevo Alumno</title>
+        <meta name="description" content="Nuevo estudiante" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
         <div className={Style.centerContainer}>
             <div className={Style.formContainer}>
-                <h1>Nuevo Profesor</h1>
+                <h1>Nuevo Alumno</h1>
                 <form onSubmit={handleSubmit} className={Style.form}>
                     <div className={Style.form_group}>
                         <label htmlFor="name">Nombre:</label>
