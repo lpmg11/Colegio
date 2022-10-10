@@ -55,8 +55,8 @@ const NavBar = ({Tittle}) => {
             <div className={Style.navbar__container}>
                 <h1>{Tittle}</h1>
                 <button onClick={ handleMenu } className={Style.navbar_expand}>{" "}
-                    <svg xmlns="http://www.w3.org/2000/svg" height="30" width="30" 
-                    style={{fill: "white",  strokeWidth: "0px"}} className={Style.svg} >
+                    <svg height="30" width="30" 
+                    style={{fill: "white", stroke:"transparent", strokeWidth: "0px" }} viewBox="0 0 50 40" className={Style.svg} >
                     <path d="M6 38.05v-3h36v3Zm0-8.3v-3h36v3Zm0-8.35v-3h36v3Zm0-8.35v-3h36v3Z"/></svg>
                 </button>
             </div>
