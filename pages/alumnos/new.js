@@ -58,6 +58,13 @@ export default function Home() {
                     <div className={Style.form_group}>
                         <button type="submit">Guardar</button>
                     </div>
+                    <div className={Style.form_group}>
+                        <Link href="/alumnos">
+                            <button >
+                                <a>Cancelar</a>
+                            </button>
+                        </Link>
+                    </div>
                 </form>
             </div>
         </div>

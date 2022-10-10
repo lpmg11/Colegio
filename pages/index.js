@@ -7,14 +7,14 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>prueba</title>
+        <title>Panel de administración</title>
         <meta name="description" content="Administracion de colegio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
         <NavBar Tittle="Colegio" />
         <div className={Style.container}>
-          <h1> Panel de Administracion</h1>
+          <h1> Panel de Administración</h1>
         </div>
       </main>
     </div>

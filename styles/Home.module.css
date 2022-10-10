@@ -13,13 +13,12 @@
   flex-wrap: wrap;
 }
 
-
 .card {
   display: flex;
-    flex-direction: column;
-    align-content: space-between;
-  margin : 1rem;
-  flex-basis: 140px;
+  flex-direction: column;
+  align-content: space-between;
+  margin: 1rem;
+  flex-basis: 240px;
   padding: 1.5rem;
   text-align: left;
   color: inherit;
@@ -52,7 +51,7 @@
   color: #2484f1;
 }
 
-.addButton{
+.addButton {
   position: fixed;
   bottom: 30px;
   right: 30px;
@@ -65,51 +64,52 @@
   background-color: #4d4d4d;
   color: #fff;
   font-size: 2rem;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.addButton a{
+.addButton a {
   text-decoration: none;
   color: #fff;
 }
 
-.addButton:hover{
+.addButton:hover {
   background-color: #f50057;
   box-shadow: 0 0 10px rgba(255, 116, 165, 0.949);
 }
 
 /* adding click effect */
-.addButton:active{
+.addButton:active {
   transform: scale(0.9);
 }
 
-.centerContainer{
+.centerContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
-  background: #363636;
+  min-height: 100vh;
+  background: #000;
   color: #fff;
 }
 
-.formContainer{
+.formContainer {
   box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 400px;
-  height: 70vh;
+  min-width: 300px;
+  max-width: 400px;
+  min-height: 600px;
   border: 1px solid #eaeaea;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
   background: #1a1a1a;
 }
 
-.formContainer h1{
+.formContainer h1 {
   margin: 0;
   margin-top: 2rem;
   padding: 0;
@@ -125,9 +125,9 @@
   align-items: center;
   width: 100%;
   height: 100%;
-  margin : 1rem;
+  margin: 1rem;
 }
-.form_group{
+.form_group {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -136,7 +136,7 @@
   height: 100%;
   padding: 1rem;
 }
-.form_group label{
+.form_group label {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -146,7 +146,7 @@
   font-size: 1.2rem;
   color: #fff;
 }
-.form_group input{
+.form_group input {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -162,11 +162,11 @@
   outline: none;
 }
 
-.form_group input:focus{
+.form_group input:focus {
   border: 1px solid #f50057;
 }
 
-.form_group input::placeholder{
+.form_group input::placeholder {
   color: rgb(151, 151, 151);
 }
 .form_group button {
@@ -185,4 +185,12 @@
   outline: none;
   cursor: pointer;
   transition: all 0.3s ease;
+}
+.form_group button:hover {
+  background: #f50057;
+  border: 1px solid #f50057;
+}
+.form_group button a {
+  text-decoration: none;
+  color: #fff;
 }
